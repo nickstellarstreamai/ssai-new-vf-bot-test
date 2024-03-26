@@ -2,20 +2,20 @@
 <html>
 <head>
   <title>My Voiceflow Bot</title>
+  <script src="https://cdn.voiceflow.com/widget/bundle.js"></script>
 </head>
 <body>
-  <script type="text/javascript">
-    (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      document.addEventListener('DOMContentLoaded', function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: '655bdd29292a21c07e66389a' },
-          url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
-        });
-      });
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-    })(document, 'script');
+  <div id="root"></div>
+  <script>
+    window.addEventListener('load', function() {
+      const config = {
+        verify: { projectID: '655bdd29292a21c07e66389a' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        element: document.getElementById('root')
+      };
+      window.voiceflow.Widget.init(config);
+    });
   </script>
 </body>
 </html>
