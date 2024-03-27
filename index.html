@@ -2,20 +2,9 @@
 <html>
 <head>
   <title>My Voiceflow Bot</title>
-  <script src="https://cdn.voiceflow.com/widget/bundle.js"></script>
 </head>
 <body>
-  <div id="root"></div>
-  <script>
-    window.addEventListener('load', function() {
-      const config = {
-        verify: { projectID: '655bdd29292a21c07e66389a' },
-        url: 'https://general-runtime.voiceflow.com',
-        versionID: 'production',
-        element: document.getElementById('root')
-      };
-      window.voiceflow.Widget.init(config);
-    });
-  </script>
+  <div id="voiceflow"></div>
+  <script src="voiceflow.js"></script>
 </body>
 </html>
