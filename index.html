@@ -13,8 +13,30 @@
     h1 {
       color: #333;
     }
-    #voiceflow {
-      margin-top: 20px;
+    #chat-container {
+      max-width: 500px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    #chat-header {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+    #chat-body {
+      height: 400px;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+    #chat-input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-top: 1px solid #ccc;
+      outline: none;
     }
   </style>
 </head>
@@ -22,7 +44,11 @@
   <h1>Welcome to My Voiceflow Bot</h1>
   <p>This is an example of embedding a Voiceflow bot on a GitHub Pages site.</p>
   
-  <div id="voiceflow"></div>
+  <div id="chat-container">
+    <div id="chat-header">Chat with My Bot</div>
+    <div id="chat-body"></div>
+    <input id="chat-input" type="text" placeholder="Type your message...">
+  </div>
   
   <script src="https://cdn.voiceflow.com/widget/bundle.js"></script>
   <script src="voiceflow.js"></script>
